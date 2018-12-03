@@ -9,8 +9,8 @@ public class Buyer {
     private char packageSize;           // размер пакета для покупок S, M or L
     private int distanceToHome;         // расстояние до дома в метрах
     private double maxLiftingWeight;    // маскимальный переносимый вес, КГ
-    private final int appleCost = 10;   // стоимость яблок за КГ
-    private final int carrotCost = 15;  // стоимость морковки за КГ
+    private final int APPLE_COST = 10;   // стоимость яблок за КГ
+    private final int CARROT_COST = 15;  // стоимость морковки за КГ
 
     public Buyer(String product, int money, double maxLiftingWeight, char packageSize, int distanceToHome) {
         this.product = product;
@@ -26,10 +26,10 @@ public class Buyer {
             System.out.println("У меня слишком мало денег");
         } else {
             if (product == "apple") {
-                purchaseWeight = appleCost / money;
+                purchaseWeight = money / APPLE_COST;
                 System.out.println("Вы купили" + purchaseWeight + "кг яблок");
             } else if (product == "carrot") {
-                purchaseWeight = carrotCost / money;
+                purchaseWeight = money / CARROT_COST;
                 System.out.println("Вы купили" + purchaseWeight + "кг морковки");
             } else {
                 System.out.println("В магазине нет этого продукта");
