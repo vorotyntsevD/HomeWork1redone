@@ -27,10 +27,10 @@ public class Buyer {
         } else {
             if (product == "apple") {
                 purchaseWeight = money / APPLE_COST;
-                System.out.println("Вы купили" + purchaseWeight + "кг яблок");
+                System.out.println("Вы купили " + purchaseWeight + " кг яблок");
             } else if (product == "carrot") {
                 purchaseWeight = money / CARROT_COST;
-                System.out.println("Вы купили" + purchaseWeight + "кг морковки");
+                System.out.println("Вы купили " + purchaseWeight + " кг морковки");
             } else {
                 System.out.println("В магазине нет этого продукта");
             }
