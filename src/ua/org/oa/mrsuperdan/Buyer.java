@@ -49,18 +49,20 @@ public class Buyer {
     }
 
     // Проверяю подходит ли пакет для этого количества еды
-    public void checkPackageSize() {
-        if (purchaseWeight < 1 && packageSize != 'S')
-            System.out.println("Надо купить другой пакет");
-        else if((purchaseWeight>=1 ||purchaseWeight<3) && packageSize != 'M')
-            System.out.println("Надо купить другой пакет");
-        else if(purchaseWeight >= 3 && packageSize != 'L')
-            System.out.println("Надо купить другой пакет");
-        else
+        public void checkPackageSize() {
+        if (packageSize == 'S' || packageSize == 'M' || packageSize == 'L' ) {
+            if (purchaseWeight < 1 && packageSize != 'S')
+                System.out.println("Надо купить другой пакет");
+            else if ((purchaseWeight >= 1 || purchaseWeight < 3) && packageSize != 'M')
+                System.out.println("Надо купить другой пакет");
+            else if (purchaseWeight >= 3 && packageSize != 'L')
+                System.out.println("Надо купить другой пакет");
+            else
+                System.out.println("У меня подходящий пакет");
+        } else
             System.out.println("UNKNOWN PACKAGE SIZE. Correct it, please");
 
     }
-
 
 
 
